@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE MANIA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="navborder">
+            <div class="first-nav-bar">
+                <div class="logo-search">
+                    <div class="logo">
+                        <h2><i class="fa-solid fa-ticket"></i>ticKET_freNZY</h2>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search Movies">
+                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </div>
+                <div class="location-signin">
+                    <div class="location-dropdown">
+                        <button class="location-btn">Select Location <i class="fa-solid fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#mumbai">Mumbai</a>
+                            <a href="#delhi">Delhi</a>
+                            <a href="#bangalore">Bangalore</a>
+                            <a href="#kolkata">Kolkata</a>
+                            <a href="#chennai">Chennai</a>
+                            <a href="#bhubaneswar">Bhubaneswar</a>
+                        </div>
+                    </div>
+                    <div class="sign-in">
+                        <a href="#signin" class="sign-in">Sign In</a>
+                        <a href="#log-in" class="log-in">Log In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-second">
+            <div class="left-div-nav">
+             <nav>
+                 <a href="#home">Home</a>
+                 <a href="#movies">Movies</a>
+                 <a href="#stream">Stream</a>
+                <a href="#sports">Sports</a>
+             </nav>
+            </div>
+            <div class="right-div-nav">
+             <nav>
+                <a href="#list-your-shows">ListYourShow</a> 
+                <a href="#corporates">Corporates</a> 
+                <a href="#offer">Offers</a> 
+                <a href="#gift-card">Gift Cards</a> 
+             </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="home" class="slideshow-container">
+            <div class="mySlides ">
+                <img src="./images/jigra.jpg" alt="jigra">
+                <img src="./images/popcorn.jpg" alt="popcorn">
+                <img src="./images/venom.jpg" alt="venom">
+                <img src="./images/playcards.jpg" alt="playcards">
+                <img src="./images/the wild robot.jpg" alt="the wild robot">
+            </div>
+        </div>
+        <div id="movies" class="Movies-sec">
+            <div class="movie-sec-header">
+                <h2>IN THEATERS</h2>
+            </div>
+            <div class="movies-container-sec">
+                <div class="moviess" onclick="openModal('Venom: The Last Dance')">
+                    <h4>Venom:The Last Dance</h4>
+                    <img src="images/venom-the last dance.jpeg" alt="venom-the last dance">
+                    <p class="rating">Rating:<i class="fa-solid fa-heart" style="color: #d31212;"></i>8.9/10</p>
+                    <p class="genre">Action/Adventure/Sci-Fi</p>
+                    <p class="language">English,Telgue,Hindi,Tamil</p>
+                </div>
+                <div class="moviess"  onclick="openModal('Vicky Vidhya Ka Woh Wala Video')">
+                    <h4>Vicky Vidhya Ka Woh Wala Video</h4>
+                    <img src="./images/vikey vidhya.jpg" alt="vicky vidhya ka woh wala video">
+                    <p class="rating">Rating:<i class="fa-solid fa-heart" style="color: #d31212;"></i>7/10</p>
+                    <p class="genre">Comedy/Drama/period </p>
+                    <p class="language">Hindi</p>
+                </div>
+                <div class="moviess" onclick="openModal('Karma: When The Destiny Strikes')">
+                    <h4>Karma:When The Destiny Strikes</h4>
+                    <img src="images/karma-when the destiny strikes.webp" alt="karma-when the destiny strikes">
+                    <p class="rating">Rating:<i class="fa-solid fa-heart" style="color: #d31212;"></i>8/10</p>
+                    <p class="genre">Action/Thriller</p>
+                    <p class="language">Odia</p>
+                </div>
+                <div class="moviess" onclick="openModal('The Wild Robot')">
+                    <h4>The Wild Robot</h4>
+                    <img src="./images/the wild robot image.jpg" alt="wild robot">
+                    <p class="rating">Rating:<i class="fa-solid fa-heart" style="color: #d31212;"></i>8.5/10</p>
+                    <p class="genre">Adventure/Animation</p>
+                    <p class="language">English,Hindi</p>
+                </div>
+                <div class="moviess" onclick="openModal('Jigra')">
+                    <h4>Jigra</h4>
+                    <img src="./images/jigraa.jpeg" alt="JIGRA">
+                    <p class="rating">Rating:<i class="fa-solid fa-heart" style="color: #d31212;"></i>7.9/10</p>
+                    <p class="genre">Action/Drama/Thriller</p>
+                    <p class="language">Hindi,Telgue</p>
+                </div>
+            </div>
+        </div>
+        <div id="stream" class="stream-sec" >
+           <div class="stream-container">
+            <div class="stream-container-header">
+            <h3>STREAM ENDLESS ENTERTAIMENT!</h3>
+            </div>
+            <h4 class="popular-now-header">Popular Right Now</h4>
+                    <div class="popular-content">
+                        <div class="content-item"  onclick="openModal('Stranger Things')">
+                            <img src="images/stranger things.png" alt="Stranger Things">
+                            <p>Stranger Things</p>
+                        </div>
+                        <div class="content-item" onclick="openModal('The Mandalorian')">
+                            <img src="images/the mandalora.png" alt="The Mandalorian">
+                            <p>The Mandalorian</p>
+                        </div>
+                        <div class="content-item" onclick="openModal('The Boys')">
+                            <img src="images/the boys.png" alt="The Boys">
+                            <p>The Boys</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="sport-sec" id="sports">
+            <div class="sport-sec-header">
+                <h3>UPCOMING SPORTS</h3>
+            </div>
+            <div class="sports-container">
+                <div class="sport-content" onclick="openModal('Tricolor Triumph Virtual Run')">
+                    <h4>Tricolor Triumph Virtual Run</h4>
+                    <img src="./images/virtual run.png" alt="virtual run">
+                    <p class="description">Your Place Your Time:INDIA</p>
+                </div>
+                <div class="sport-content" onclick="openModal('Vande Mataram Virtual Marathon')">
+                    <h4>Vande Mataram Virtual Marathon</h4>
+                    <img src="./images/vande mataram.png" alt="vande mataram marathon">
+                    <p class="description">Your Place Your Time:INDIA</p>
+                </div>
+                <div class="sport-content" onclick="openModal('Spartan 10KM Marathon')">
+                    <h4>Spartan 10KM Marathon</h4>
+                    <img src="images/spartan marathon.png" alt="spartan marathon">
+                    <p class="description">Your Place Your Time:INDIA</p>
+                </div>
+                <div class="sport-content" onclick="openModal('Run For the Ocean')">
+                    <h4>Run For the Ocean</h4>
+                    <img src="./images/run for ocean.png" alt="run for the ocean">
+                    <p class="description">Your Place Your Time:INDIA</p>
+                </div>
+                <div class="sport-content">
+                    <h4>Run For Fitness Marathon</h4>
+                    <img src="./images/fitness marathon.png" alt="fitness marathon">
+                    <p class="description">Your Place Your Time:INDIA</p>
+                </div>
+            </div>
+        </div>
+        <div class="signin-sec">
+        <div class="sign-in-Log-in-conatiner" >
+            <div class="sign-in-container" id="signin">
+            <h4>Sign In</h4>
+            <form class="signin-form">
+               <p> Don't have an account? Sign up !</p>
+               <span>Name:</span>
+               <input type="text"placeholder="Name" required>
+               <span>Contact number:</span><input type="number" placeholder="mobile number"required>
+               <span>Password:</span><input type="password" placeholder="Create Password" required>
+               <button type="submit">Sign In</button>
+            </form>
+           </div>
+           <div class="log-in-container" id="log-in">
+            <h4>Log In</h4>
+               <form class="Login-form">
+                <p id="Login">Already Had An Account?Log-in</p>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+        </div>        
+    </div>
+  </main>
+  <footer class="site-footer">
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>About Us</h4>
+                        <p>Ticket Frenzy is your one-stop solution for all your ticket booking needs. Get the best deals on movie, event, and sports tickets with us.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#movies">Movies</a></li>
+                            <li><a href="#events">Events</a></li>
+                            <li><a href="#sports">Sports</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Us</h4>
+                        <p>Email:<a href="mailto: support@ticketfrenzy.com"> support@ticketfrenzy.com</a></p>
+                        <p>Phone: <a href="tel:+91 2138978800">+91 2138978800</a></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Ticket Frenzy. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Book Your Seats</h2>
+                <p id="movieTitle"></p>
+                <form id="bookingForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    
+                    <label for="seat-selection">Select Seats:</label>
+                    <div id="seat-selection" class="seat-container"></div>
+        
+                    <label for="seats">Number of Seats:</label>
+                    <input type="number" id="seats" min="1" required>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+<script src="script.js"></script>
+</body>
+</html>
