@@ -23,56 +23,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default anchor click behavior
+            event.preventDefault(); 
             
-            const targetId = this.getAttribute('href'); // Get the target section ID
-            const targetSection = document.querySelector(targetId); // Select the target section
+            const targetId = this.getAttribute('href'); 
+            const targetSection = document.querySelector(targetId); 
             
             if (targetSection) {
-                // Get the position of the target section
+            
                 const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
 
-                // Calculate the offset based on the height of the fixed header
-                const headerOffset = document.querySelector('header').offsetHeight; // Adjust as needed
+            
+                const headerOffset = document.querySelector('header').offsetHeight; 
                 const scrollToPosition = targetPosition - headerOffset;
 
-                // Smooth scroll to the target position
+            
                 window.scrollTo({
                     top: scrollToPosition,
-                    behavior: 'smooth' // Smooth scrolling
+                    behavior: 'smooth' 
                 });
             }
         });
     });
 
 });
-// Script to handle modal opening and closing
+
 const bookingModal = document.getElementById("bookingModal");
 const movieTitleElement = document.getElementById("movieTitle");
 const seatContainer = document.getElementById("seat-selection");
 
-// Function to open the modal and set the movie title
+
 function openModal(movieTitle) {
     bookingModal.style.display = "block";
     movieTitleElement.textContent = `Booking for: ${movieTitle}`;
     renderSeats(); // Renders seats each time modal opens
 }
 
-// Function to close the modal
+
 function closeModal() {
     bookingModal.style.display = "none";
 }
 
-// Close modal when user clicks outside of the modal content
+
 window.onclick = function(event) {
     if (event.target === bookingModal) {
         closeModal();
     }
-};
-
-// Function to render seats dynamically in the seat-container div
+}
 function renderSeats() {
-    // Clear any existing seats
+
     seatContainer.innerHTML = "";
     
     // Let's assume a 5x5 seat grid (25 seats)
@@ -83,33 +81,33 @@ function renderSeats() {
         seat.classList.add("seat");
         seat.textContent = i;
 
-        // Randomly mark some seats as occupied for demo purposes
+        
         if (Math.random() < 0.2) {
             seat.classList.add("occupied");
         }
 
-        // Add click event to toggle seat selection
+        
         seat.addEventListener("click", () => selectSeat(seat));
 
         seatContainer.appendChild(seat);
     }
 }
 
-// Function to handle seat selection and toggle seat color
+
 function selectSeat(seat) {
-    // Prevent selection of occupied seats
+    
     if (seat.classList.contains("occupied")) return;
 
-    // Toggle selection state
+    
     seat.classList.toggle("selected");
 }
 
-// Form submission event listener
+
 const bookingForm = document.getElementById("bookingForm");
 bookingForm.addEventListener("submit", (event) => {
     event.preventDefault();
     
-    // Gather selected seat numbers
+    
     const selectedSeats = Array.from(seatContainer.getElementsByClassName("seat selected")).map(seat => seat.textContent);
     
     if (selectedSeats.length === 0) {
@@ -119,7 +117,7 @@ bookingForm.addEventListener("submit", (event) => {
     
     alert(`Seats booked successfully: ${selectedSeats.join(", ")}`);
     
-    // Reset form and close modal
+    
     bookingForm.reset();
     closeModal();
 });
