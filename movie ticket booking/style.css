@@ -746,23 +746,23 @@ form button:hover {
     }
 
     .location-signin {
-        width: 100%; /* Ensure buttons take full width */
-        margin-top: 10px; /* Space between elements */
+        width: 100%; 
+        margin-top: 10px; 
     }
 }
 
-/* For Mobile Devices */
+
 @media (max-width: 480px) {
     .first-nav-bar {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px; 
     }
 
     .search-box input {
-        font-size: 0.9em; /* Slightly smaller text for mobile */
+        font-size: 0.9em; 
     }
 
     .location-btn {
-        font-size: 0.8em; /* Adjust font size for buttons */
+        font-size: 0.8em; 
     }
 }
 /* Modal styles */
@@ -818,10 +818,10 @@ form button:hover {
 }
 
 .seat.selected {
-    background-color: #6c7ae0; /* Selected seats color */
+    background-color: #6c7ae0; 
 }
 
 .seat.occupied {
-    background-color: #444; /* Occupied seats color */
+    background-color: #444; 
     cursor: not-allowed;
 }
